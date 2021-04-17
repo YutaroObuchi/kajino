@@ -20,3 +20,6 @@
 
 ### マーケット
 - 20〜30代の共働きの夫婦
+
+### 画面遷移図
+- https://www.figma.com/file/aUcalN68M6gWeOiPKVpxsx/kajino?node-id=0%3A1
