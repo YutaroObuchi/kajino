@@ -23,3 +23,6 @@
 
 ### 画面遷移図
 - https://www.figma.com/file/aUcalN68M6gWeOiPKVpxsx/kajino?node-id=0%3A1
+
+### ER図
+- https://drive.google.com/file/d/1Lf2bAC4IFqXTCAc5Vd6PBr5U2nt5XVS7/view?usp=sharing
