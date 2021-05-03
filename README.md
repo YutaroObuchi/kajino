@@ -1,24 +1,28 @@
-# README
+# kajino
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### サービス概要
+夫婦や同棲中のカップルに、各家庭ごとの最適な家事バランスを提案する、家事の負担可視化サービス
 
-Things you may want to cover:
+### 登場人物
+エンドユーザー
+- 夫婦
+- 同棲中のカップル
 
-* Ruby version
+### ユーザーが抱える課題
+- 家事という行為が定量的に評価されないため、どちらかに負担が偏りがちになっている
+- 家事が原因でケンカに発展し、豊かな日常を阻害している
 
-* System dependencies
+### 解決方法
+- ブラックボックス化されている家事を数値で可視化し、負担を共有できるようにする
 
-* Configuration
+### プロダクト
+- 日々の家事を入力することで簡単に負担を数値化してくれるwebアプリケーション
 
-* Database creation
+### マーケット
+- 20〜30代の共働きの夫婦
 
-* Database initialization
+### 画面遷移図
+- https://www.figma.com/file/aUcalN68M6gWeOiPKVpxsx/kajino?node-id=0%3A1
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### ER図
+- https://drive.google.com/file/d/1Lf2bAC4IFqXTCAc5Vd6PBr5U2nt5XVS7/view?usp=sharing
