@@ -1,0 +1,12 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+  groups:
+    new:
+      title: 'グループ作成'
+      make: '作成'
+    create:
+      success: 'グループが作成されました'
+      fail: 'グループ作成に失敗しました'
