@@ -4,5 +4,5 @@ Rails.application.routes.draw do
       #get 'percentage'
     #end
   end
-  root 'application#hello'
+  root 'static_pages#home'
 end
