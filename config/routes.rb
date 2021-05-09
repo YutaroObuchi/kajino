@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :groups, only: [:new, :create] do
+    #collection do
+      #get 'percentage'
+    #end
+  end
+  root 'application#hello'
 end

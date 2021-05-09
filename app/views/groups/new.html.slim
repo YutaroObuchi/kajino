@@ -1,0 +1,6 @@
+= render 'shared/flash_message'
+.container
+  .row
+    .col-lg-8.offset-lg-2
+      h1= (t 'groups.new.title')
+      = render 'form', { group: @group }
