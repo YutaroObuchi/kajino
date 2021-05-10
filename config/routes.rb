@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :groups, only: [:new, :create] do
+  resources :groups, only: [:new, :create, :show] do
     #collection do
       #get 'percentage'
     #end

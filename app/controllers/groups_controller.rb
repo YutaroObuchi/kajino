@@ -14,6 +14,8 @@ class GroupsController < ApplicationController
      end
   end
 
+  def show;end
+
   def percentage
 
   end
