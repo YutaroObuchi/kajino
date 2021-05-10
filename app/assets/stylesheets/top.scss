@@ -1,0 +1,23 @@
+.top-wrapper {
+
+
+  .top-register{
+    .login-button{
+      text-align:center;
+      margin:0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+        .btn.btn-outline-warning{
+          width: 180px;
+        }
+    }
+    .register-button{
+      text-align:center;
+      margin:0 auto;
+        .btn.btn-outline-warning{
+          width: 180px;
+        }
+    }
+  }
+}
+
