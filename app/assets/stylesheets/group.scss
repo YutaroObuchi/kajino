@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+.top-wrapper{
+  .weekly-percentage{
+  	margin-top: 25px;
+  	text-align:center;
+  	color: #ffa500	;
+  	font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .user-name{
+  	margin-top: 50px;
+  	font-size: 0;
+  	text-align:center;
+  	justify-content: space-between;
+
+  	.your-name{
+      display: inline-block;
+      font-size: 20px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: bold;
+  	}
+
+  	.your-partner{
+  	  display: inline-block;
+  	  font-size: 20px;
+  	  margin-left: 400px;
+  	  margin-top: 30px;
+  	  font-family: 'Noto Sans JP', sans-serif;
+  	  font-weight: bold;
+  	}
+  }
+
+  .percentage-box{
+  	font-size: 0;
+  	text-align:center;
+
+
+  	.your-box{
+      display: inline-block;
+      border:2px solid #000000;
+      font-size: 70px;
+      background: #FDE4BE;
+      width: 150px;
+      height: 150px;
+  	}
+
+  	.your-partner-box{
+      display: inline-block;
+  	  border:1px solid #000000;
+  	  font-size: 70px;
+      background: #FDE4BE;
+      width: 150px;
+      height: 150px;
+  	  margin-left: 330px;
+  	}
+  }
+
+  .select-contents{
+    text-align:center;
+    margin:0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    .today-housework{
+      margin-top: 40px;
+      .btn.btn-outline-danger{
+      	width: 180px;
+      }
+    }
+    .show-detail{
+      margin-top: 30px;
+      .btn.btn-outline-danger{
+        width: 180px;
+      }
+    }
+    .invite-user{
+      margin-top: 30px;
+      .btn.btn-outline-info{
+      	width: 180px;
+      }
+    }
+  }
+}

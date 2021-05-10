@@ -1,0 +1,23 @@
+.top-wrapper
+  .weekly-percentage
+    h2 = "今週の家事の割合"
+
+  .user-name
+    .your-name
+      p = "あなた"
+    .your-partner
+      p = "パートナー"
+
+  .percentage-box
+    .your-box
+      p = "78"
+    .your-partner-box
+      p = "22"
+
+  .select-contents
+    .today-housework
+      = link_to "今日の家事を入力する", root_path, class: 'btn btn-outline-danger'
+    .show-detail
+      = link_to "内訳を見る", root_path, class: 'btn btn-outline-danger'
+    .invite-user
+      = link_to "グループに招待する", root_path, class: 'btn btn-outline-info'
