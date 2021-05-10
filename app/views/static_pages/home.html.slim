@@ -2,5 +2,7 @@
   .top-image
     img.d-block.mx-auto[src="/assets/top.png" alt="サンプル画像" style="width:350px;"]
   .top-register
-    = link_to "ログイン", root_path, class: 'btn btn-outline-warning'
-    = link_to "kajinoを始める", root_path, class: 'btn btn-outline-warning'
+    .login-button
+      = link_to "ログイン", root_path, class: 'btn btn-outline-warning'
+    .register-button
+      = link_to "kajinoを始める", root_path, class: 'btn btn-outline-warning'
