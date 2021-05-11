@@ -1,0 +1,23 @@
+.top-wrapper
+  .weekly-percentage
+    h2 = (t 'groups.show.today_housework')
+
+  .user-name
+    .your-name
+      p = "あなた"
+    .your-partner
+      p = "パートナー"
+
+  .percentage-box
+    .your-box
+      p = "78"
+    .your-partner-box
+      p = "22"
+
+  .select-contents
+    .today-housework
+      = link_to (t 'groups.show.input_housework'), root_path, class: 'btn btn-outline-danger'
+    .show-detail
+      = link_to (t 'groups.show.show_detail'), root_path, class: 'btn btn-outline-danger'
+    .invite-user
+      = link_to (t 'groups.show.invite_group'), root_path, class: 'btn btn-outline-info'
