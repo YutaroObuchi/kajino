@@ -4,5 +4,6 @@ Rails.application.routes.draw do
       #get 'percentage'
     #end
   end
+  resources :users, only: %i[new create]
   root 'static_pages#home'
 end
