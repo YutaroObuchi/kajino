@@ -1,6 +1,6 @@
 .top-wrapper
   .weekly-percentage
-    h2 = "今週の家事の割合"
+    h2 = (t 'groups.show.today_housework')
 
   .user-name
     .your-name
@@ -16,8 +16,8 @@
 
   .select-contents
     .today-housework
-      = link_to "今日の家事を入力する", root_path, class: 'btn btn-outline-danger'
+      = link_to (t 'groups.show.input_housework'), root_path, class: 'btn btn-outline-danger'
     .show-detail
-      = link_to "内訳を見る", root_path, class: 'btn btn-outline-danger'
+      = link_to (t 'groups.show.show_detail'), root_path, class: 'btn btn-outline-danger'
     .invite-user
-      = link_to "グループに招待する", root_path, class: 'btn btn-outline-info'
+      = link_to (t 'groups.show.invite_group'), root_path, class: 'btn btn-outline-info'
