@@ -1,0 +1,9 @@
+nav.navbar.navbar-expand-md.navbar-dark.bg-warning.shadow-sm
+  .container
+    .container-left
+      = link_to "kajino", root_path, class: 'navbar-brand'
+    .container-center
+      = link_to "ログアウト", logout_path, class: 'navbar-brand', method: :delete
+      = link_to "グループを作成する", new_group_path, class: 'navbar-brand'
+      = link_to current_user.name, root_path, class: 'navbar-brand'
+

@@ -2,6 +2,11 @@ require 'rails_helper'
 RSpec.describe 'グループ機能', type: :system do
 
   let(:group) {create :group}
+  let(:user) {create :user}
+
+  before do
+    login(user)
+  end
 
   describe 'グループの作成' do
    before do
@@ -23,9 +28,9 @@ RSpec.describe 'グループ機能', type: :system do
 
   describe 'マイページ機能' do
 
-    fit 'グループ作成後マイページに遷移することができる' do
+    it 'グループ作成後マイページに遷移することができる' do
       visit group_path(group)
-      expect(page).to have_content '今週の家事の割合'
+      expect(page).to have_content '今週の家事割合'
     end
   end
 
