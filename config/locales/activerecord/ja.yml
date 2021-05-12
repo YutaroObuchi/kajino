@@ -5,3 +5,11 @@ ja:
     attributes:
       group:
         name: 'グループ名'
+      user:
+        name: 'ユーザー名'
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        login: 'ログイン'
+        register: '新規登録'
+

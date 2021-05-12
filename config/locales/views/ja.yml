@@ -15,3 +15,7 @@ ja:
       input_housework: '今日の家事を入力する'
       show_detail: '内訳を見る'
       invite_group: 'グループに招待する'
+  users:
+    new:
+      register: '新規登録'
+
