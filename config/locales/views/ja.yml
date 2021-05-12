@@ -11,7 +11,7 @@ ja:
       success: 'グループが作成されました'
       fail: 'グループ作成に失敗しました'
     show:
-      today_housework: '今日の家事'
+      today_housework: '今週の家事割合'
       input_housework: '今日の家事を入力する'
       show_detail: '内訳を見る'
       invite_group: 'グループに招待する'
