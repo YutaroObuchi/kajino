@@ -5,8 +5,9 @@ class GroupsController < ApplicationController
   end
 
   def create
-  	@group = Group.create(group_params)
-     if @group.save
+    @user = current_user
+    @group = @user.groups.build(group_params)
+     if @user.save
        redirect_to new_group_path, success: t('.success')
      else
        flash.now[:danger] = t('.fail')
