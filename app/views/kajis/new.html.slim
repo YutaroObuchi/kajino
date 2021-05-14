@@ -1,2 +1,6 @@
-h1 Kajis#new
-p Find me in app/views/kajis/new.html.slim
+= render 'shared/flash_message'
+.container
+  .row
+    .col-lg-8.offset-lg-2
+      h1= "家事を作成する"
+      = render 'form', { kaji: @kaji }

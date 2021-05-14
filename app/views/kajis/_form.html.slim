@@ -1,0 +1,5 @@
+= form_with model: kaji, local: true do |f|
+  .form-group
+    = f.select :name, [["洗濯", "洗濯"], ["食器洗い", "食器洗い"], ["掃除機かけ", "掃除機かけ"], ["お風呂掃除", "お風呂掃除"]], include_blank: "選択して下さい", class: 'form-control'
+    = f.number_field :score, class: 'form-control', min: 1, max: 100
+  = f.submit "作成する", class: 'btn btn-primary'
