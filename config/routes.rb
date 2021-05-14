@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       #get 'percentage'
     #end
   end
+  resources :kajis, only: %i[new create]
   resources :users, only: %i[new create]
   root 'static_pages#home'
 end
