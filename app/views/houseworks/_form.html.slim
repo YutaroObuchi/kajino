@@ -1,5 +1,22 @@
-= form_with model: housework, local: true do |f|
+= form_with model: housework , local: true do |f|
   .form-group
-    = f.select :name, [["洗濯", "洗濯"], ["食器洗い", "食器洗い"], ["掃除機かけ", "掃除機かけ"], ["お風呂掃除", "お風呂掃除"]], include_blank: "選択して下さい", class: 'form-control'
-    = f.number_field :score, class: 'form-control', min: 1, max: 100
+
+    = f.select '[houseworks][][name]', [["洗濯", "洗濯"], ["食器洗い", "食器洗い"], ["掃除機かけ", "掃除機かけ"], ["お風呂掃除", "お風呂掃除"]], include_blank: "選択して下さい", class: 'form-control'
+    = f.number_field '[houseworks][][score]', class: 'form-control', min: 1, max: 100
+    = f.hidden_field 'houseworks[][group_id]', value: group.id
+    = f.hidden_field 'houseworks[][created_at]', value: time
+    = f.hidden_field 'houseworks[][updated_at]', value: time
+
+    = f.select '[houseworks][][name]', [["洗濯", "洗濯"], ["食器洗い", "食器洗い"], ["掃除機かけ", "掃除機かけ"], ["お風呂掃除", "お風呂掃除"]], include_blank: "選択して下さい", class: 'form-control'
+    = f.number_field '[houseworks][][score]', class: 'form-control', min: 1, max: 100
+    = f.hidden_field 'houseworks[][group_id]', value: group.id
+    = f.hidden_field 'houseworks[][created_at]', value: time
+    = f.hidden_field 'houseworks[][updated_at]', value: time
+
+    = f.select '[houseworks][][name]', [["洗濯", "洗濯"], ["食器洗い", "食器洗い"], ["掃除機かけ", "掃除機かけ"], ["お風呂掃除", "お風呂掃除"]], include_blank: "選択して下さい", class: 'form-control'
+    = f.number_field '[houseworks][][score]', class: 'form-control', min: 1, max: 100
+    = f.hidden_field 'houseworks[][group_id]', value: group.id
+    = f.hidden_field 'houseworks[][created_at]', value: time
+    = f.hidden_field 'houseworks[][updated_at]', value: time
+
   = f.submit "作成する", class: 'btn btn-primary'
