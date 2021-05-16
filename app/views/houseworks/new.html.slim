@@ -2,5 +2,5 @@
 .container
   .row
     .col-lg-8.offset-lg-2
-      h1= "家事を作成する"
+      h1= (t 'houseworks.new.register')
       = render 'form', { housework: @housework, group: @group, time: @time }
