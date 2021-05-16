@@ -8,7 +8,12 @@ class HouseworksController < ApplicationController
 
   def create
     array =  params[:housework][:houseworks]
-    Housework.insert_all(array)
+    if Housework.insert_all(array)
+      redirect_to group_path(current_user.group_users), success: t('.success')
+    else
+      flash.now[:danger] = t('.fail')
+      render :new
+    end
   end
 
   private
