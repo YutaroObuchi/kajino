@@ -22,6 +22,7 @@ ja:
     new:
       register: '家事ポイントを登録する'
       submit: '作成する'
+      tell_burden: '各家事の負担をポイントで教えてください(最大10ポイント)'
     create:
       success: '家事が登録されました'
       fail: '登録に失敗しました'
