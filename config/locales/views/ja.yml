@@ -20,7 +20,7 @@ ja:
       register: '新規登録'
   houseworks:
     new:
-      register: '家事を登録する'
+      register: '家事ポイントを登録する'
       submit: '作成する'
     create:
       success: '家事が登録されました'
