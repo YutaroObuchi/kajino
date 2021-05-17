@@ -1,0 +1,7 @@
+= render 'shared/flash_message'
+.container
+  .row
+    .col-lg-8.offset-lg-2
+      h1= (t 'houseworks.new.register')
+      p = (t 'houseworks.new.tell_burden')
+      = render 'form', { housework: @housework, group: @group, time: @time }

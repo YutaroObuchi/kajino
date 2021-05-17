@@ -12,4 +12,11 @@ ja:
         password_confirmation: 'パスワード確認'
         login: 'ログイン'
         register: '新規登録'
+      housework:
+        bath_cleaning: 'お風呂掃除'
+        washing_up: '食器洗い'
+        washing: '洗濯'
+        vacuum_cleaner: '掃除機かけ'
+        cooking: '料理'
+
 
