@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       #get 'percentage'
     #end
   end
-  resources :houseworks, only: %i[new create edit update]
+  resources :houseworks, only: %i[new create edit update index]
   resources :users, only: %i[new create]
   root 'static_pages#home'
 end

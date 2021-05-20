@@ -1,0 +1,12 @@
+= render 'shared/flash_message'
+.view-container
+  .housework-top
+    h1= "登録家事一覧"
+  .housework-block
+    - @houseworks.each do |housework|
+      .block-top
+        .name-block
+          p = "現在の「" + housework.name + "」のポイント"
+        .score-block
+          p = housework.score
+        = link_to "この家事のポイントを編集する", edit_housework_path(housework), class: 'btn.btn-outline-secondary'

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+//index系
+.view-container{
+	background-color: #fdf5e6;
+  .housework-top{
+  	text-align:center;
+  	margin-bottom: 50px;
+  	margin-top: 30px;
+  }
+
+  .housework-block{
+  	text-align:center;
+  	p{
+      color: #808080;
+  	}
+
+    .block-top{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      border: solid 1px #000000;
+      width: 300px;
+      margin: auto;
+      .name-block{
+
+  	  }
+  	  .score-block{
+        width: 150px;
+        height: 50px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+//edit系
+.edit-container{
+  text-align:center;
+  .edit-row{
+    text-align:center;
+  }
+  .form-block{
+    margin-top: 50px;
+    form{
+      .form-group{
+        .form-control{
+          text-align:center;
+          width: 300px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
