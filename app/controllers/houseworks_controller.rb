@@ -22,6 +22,7 @@ class HouseworksController < ApplicationController
   end
 
   def edit
+    insert_setup
     @housework = Housework.find(params[:id])
   end
 
@@ -30,7 +31,7 @@ class HouseworksController < ApplicationController
     @housework = Housework.find(params[:id])
 
     if @housework.update(edit_housework_params)
-      redirect_to houseworks_path, success: t('.success')
+      redirect_to group_houseworks_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :edit

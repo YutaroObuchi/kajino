@@ -1,4 +1,4 @@
-= form_with model: housework , local: true do |f|
+= form_with model:[group,housework] , local: true do |f|
   .form-group
     = f.text_field '[houseworks][][name]', class: 'form-control', value: (Housework.human_attribute_name(:bath_cleaning)), readonly: true
     = f.number_field '[houseworks][][score]', class: 'form-control', min: 0, max: 10, value:2

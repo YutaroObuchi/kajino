@@ -4,11 +4,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'user_sessions#destroy'
 
   resources :groups, only: [:new, :create, :show] do
-    #collection do
-      #get 'percentage'
-    #end
+    resources :houseworks, only: %i[new create edit update index]
   end
-  resources :houseworks, only: %i[new create edit update index]
   resources :users, only: %i[new create]
   root 'static_pages#home'
 end

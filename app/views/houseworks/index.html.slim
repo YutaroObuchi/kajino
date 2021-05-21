@@ -9,4 +9,4 @@
           p = "現在の「" + housework.name + "」のポイント"
         .score-block
           p = housework.score
-        = link_to (t 'houseworks.index.edit'), edit_housework_path(housework), class: 'btn.btn-outline-secondary'
+        = link_to (t 'houseworks.index.edit'), edit_group_housework_path(@group, housework), class: 'btn.btn-outline-secondary'

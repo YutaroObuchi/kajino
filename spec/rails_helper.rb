@@ -68,6 +68,7 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include LoginMacros
   config.include Creategroup
+  config.include Createhouseworks
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
