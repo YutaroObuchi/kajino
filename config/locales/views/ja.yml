@@ -26,3 +26,13 @@ ja:
     create:
       success: '家事が登録されました'
       fail: '登録に失敗しました'
+    index:
+      register: '登録家事一覧'
+      edit: 'この家事を編集する'
+    edit:
+      edit_point: '家事ポイントを編集する'
+      can_edit_point: '家事ポイントを変更することができます'
+      submit: 'ポイントを編集する'
+    update:
+      success: '家事ポイントを更新しました'
+      fail: '更新に失敗しました'

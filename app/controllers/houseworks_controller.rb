@@ -30,9 +30,9 @@ class HouseworksController < ApplicationController
     @housework = Housework.find(params[:id])
 
     if @housework.update(edit_housework_params)
-      redirect_to houseworks_path, success: '家事ポイントを更新しました'
+      redirect_to houseworks_path, success: t('.success')
     else
-      flash.now[:danger] = "更新に失敗しました"
+      flash.now[:danger] = t('.fail')
       render :edit
     end
   end
