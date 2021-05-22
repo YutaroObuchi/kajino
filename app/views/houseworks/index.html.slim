@@ -10,3 +10,5 @@
         .score-block
           p = housework.score
         = link_to (t 'houseworks.index.edit'), edit_group_housework_path(@group, housework), class: 'btn.btn-outline-secondary'
+  .mypage-link
+    = link_to 'マイページに戻る', group_path(@group)

@@ -15,7 +15,10 @@ class GroupsController < ApplicationController
      end
   end
 
-  def show;end
+  def show
+    @date = GroupUser.find_by(user_id: current_user.id)
+    @group = Group.find_by(id: @date.group_id)
+  end
 
   def percentage
 

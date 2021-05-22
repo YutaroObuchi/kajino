@@ -20,5 +20,7 @@
       = link_to (t 'groups.show.input_housework'), root_path, class: 'btn btn-outline-danger'
     .show-detail
       = link_to (t 'groups.show.show_detail'), root_path, class: 'btn btn-outline-danger'
+    .show-detail
+      = link_to '家事ポイントを編集', group_houseworks_path(@group), class: 'btn btn-outline-danger'
     .invite-user
       = link_to (t 'groups.show.invite_group'), root_path, class: 'btn btn-outline-info'
