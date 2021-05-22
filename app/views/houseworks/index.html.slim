@@ -1,0 +1,14 @@
+= render 'shared/flash_message'
+.view-container
+  .housework-top
+    h1= (t 'houseworks.index.register')
+  .housework-block
+    - @houseworks.each do |housework|
+      .block-top
+        .name-block
+          p = "現在の「" + housework.name + "」のポイント"
+        .score-block
+          p = housework.score
+        = link_to (t 'houseworks.index.edit'), edit_group_housework_path(@group, housework), class: 'btn.btn-outline-secondary'
+  .mypage-link
+    = link_to 'マイページに戻る', group_path(@group)

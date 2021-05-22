@@ -1,0 +1,12 @@
+= render 'shared/flash_message'
+.edit-container
+  .edit-row
+    h1 = (t 'houseworks.edit.edit_point')
+  .form-block
+    p = (t 'houseworks.edit.can_edit_point')
+    /= form_with model: @housework, method: :patch , local: true do |f|
+    = form_with(url: group_housework_path(@group, @housework), method: :patch, local: true) do |f|
+      .form-group
+         = f.text_field :name, class: 'form-control', value: @housework.name, readonly: true
+         = f.number_field :score, class: 'form-control', min: 0, max: 10, value: @housework.score
+      = f.submit (t 'houseworks.edit.submit'), class: 'btn btn-primary'
