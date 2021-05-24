@@ -5,3 +5,4 @@
       h1= "家事の入力"
       p = "今日行った家事の回数を入力してください"
       = render 'form', { calculation: @calculation, housework: @housework, time: @time }
+      = link_to 'マイページに戻る', group_path(@group)

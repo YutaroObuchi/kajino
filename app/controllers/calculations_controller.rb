@@ -10,7 +10,8 @@ class CalculationsController < ApplicationController
   def create
     array =  params[:calculation][:calculations]
     if Calculation.insert_all(array)
-      redirect_to root_path, success: "完成"
+      insert_setup
+      redirect_to group_path(@group), success: "完成"
       sum_culculation
     else
       flash.now[:danger] = "失敗"
