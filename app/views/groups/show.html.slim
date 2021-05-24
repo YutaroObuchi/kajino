@@ -5,19 +5,19 @@
 
   .user-name
     .your-name
-      p = "あなた"
+      p = current_user.name
     .your-partner
-      p = "パートナー"
+      p = @partner.name
 
   .percentage-box
     .your-box
-      p = "78"
+      p = "#{@yours_last}%"
     .your-partner-box
-      p = "22"
+      p = "#{@partners_last}%"
 
   .select-contents
     .today-housework
-      = link_to (t 'groups.show.input_housework'), root_path, class: 'btn btn-outline-danger'
+      = link_to (t 'groups.show.input_housework'), new_calculation_path, class: 'btn btn-outline-danger'
     .show-detail
       = link_to (t 'groups.show.show_detail'), root_path, class: 'btn btn-outline-danger'
     .show-detail

@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :houseworks, only: %i[new create edit update index]
   end
   resources :users, only: %i[new create]
+  resources :calculations, only: %i[new create]
   root 'static_pages#home'
 end

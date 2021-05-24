@@ -1,0 +1,7 @@
+= render 'shared/flash_message'
+.container
+  .row
+    .col-lg-8.offset-lg-2
+      h1= "家事の入力"
+      p = "今日行った家事の回数を入力してください"
+      = render 'form', { calculation: @calculation, housework: @housework, time: @time }

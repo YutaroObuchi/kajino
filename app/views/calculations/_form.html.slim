@@ -1,0 +1,44 @@
+= form_with model:[calculation] , local: true do |f|
+  .form-group
+    = f.label :name, Housework.human_attribute_name(:bath_cleaning)
+    = f.number_field '[calculations][][time]', class: 'form-control', min: 0, max: 10, value:0
+    = f.hidden_field 'calculations[][housework_id]', value: @bath.id
+    = f.hidden_field 'calculations[][housework_score]', value: @bath.score
+    = f.hidden_field 'calculations[][created_at]', value: time
+    = f.hidden_field 'calculations[][updated_at]', value: time
+    = f.hidden_field 'calculations[][user_id]', value: current_user.id
+
+    = f.label :name, Housework.human_attribute_name(:washing_up)
+    = f.number_field '[calculations][][time]', class: 'form-control', min: 0, max: 10, value:0
+    = f.hidden_field 'calculations[][housework_id]', value: @dishwash.id
+    = f.hidden_field 'calculations[][housework_score]', value: @dishwash.score
+    = f.hidden_field 'calculations[][created_at]', value: time
+    = f.hidden_field 'calculations[][updated_at]', value: time
+    = f.hidden_field 'calculations[][user_id]', value: current_user.id
+
+    = f.label :name, Housework.human_attribute_name(:washing)
+    = f.number_field '[calculations][][time]', class: 'form-control', min: 0, max: 10, value:0
+    = f.hidden_field 'calculations[][housework_id]', value: @wash.id
+    = f.hidden_field 'calculations[][housework_score]', value: @wash.score
+    = f.hidden_field 'calculations[][created_at]', value: time
+    = f.hidden_field 'calculations[][updated_at]', value: time
+    = f.hidden_field 'calculations[][user_id]', value: current_user.id
+
+    = f.label :name, Housework.human_attribute_name(:vacuum_cleaner)
+    = f.number_field '[calculations][][time]', class: 'form-control', min: 0, max: 10, value:0
+    = f.hidden_field 'calculations[][housework_id]', value: @dust.id
+    = f.hidden_field 'calculations[][housework_score]', value: @dust.score
+    = f.hidden_field 'calculations[][created_at]', value: time
+    = f.hidden_field 'calculations[][updated_at]', value: time
+    = f.hidden_field 'calculations[][user_id]', value: current_user.id
+
+    = f.label :name, Housework.human_attribute_name(:cooking)
+    = f.number_field '[calculations][][time]', class: 'form-control', min: 0, max: 10, value:0
+    = f.hidden_field 'calculations[][housework_id]', value: @cook.id
+    = f.hidden_field 'calculations[][housework_score]', value: @cook.score
+    = f.hidden_field 'calculations[][created_at]', value: time
+    = f.hidden_field 'calculations[][updated_at]', value: time
+    = f.hidden_field 'calculations[][user_id]', value: current_user.id
+
+  = f.submit "ポイントを付与する", class: 'btn btn-primary'
+
