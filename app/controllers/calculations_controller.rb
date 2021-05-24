@@ -11,10 +11,10 @@ class CalculationsController < ApplicationController
     array =  params[:calculation][:calculations]
     if Calculation.insert_all(array)
       insert_setup
-      redirect_to group_path(@group), success: "完成"
+      redirect_to group_path(@group), success: t('.success')
       sum_culculation
     else
-      flash.now[:danger] = "失敗"
+      flash.now[:danger] = t('.fail')
       render :new
     end
   end

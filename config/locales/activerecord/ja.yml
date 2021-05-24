@@ -18,5 +18,10 @@ ja:
         washing: '洗濯'
         vacuum_cleaner: '掃除機かけ'
         cooking: '料理'
+      calculation:
+        today_housework: '今日の家事'
+        tell_today_housework: '今日行った家事の回数を入力してください'
+        to_mypage: 'マイページへ戻る'
+        input: '入力する'
 
 

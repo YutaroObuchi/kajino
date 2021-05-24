@@ -2,7 +2,7 @@
 .container
   .row
     .col-lg-8.offset-lg-2
-      h1= "家事の入力"
-      p = "今日行った家事の回数を入力してください"
+      h1= Calculation.human_attribute_name(:today_housework)
+      p = Calculation.human_attribute_name(:tell_today_housework)
       = render 'form', { calculation: @calculation, housework: @housework, time: @time }
-      = link_to 'マイページに戻る', group_path(@group)
+      = link_to Calculation.human_attribute_name(:to_mypage), group_path(@group)
