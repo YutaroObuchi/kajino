@@ -36,3 +36,7 @@ ja:
     update:
       success: '家事ポイントを更新しました'
       fail: '更新に失敗しました'
+  calculations:
+    create:
+      success: '今日の家事が入力されました'
+      fail: '入力に失敗しました'

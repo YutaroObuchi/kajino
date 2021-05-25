@@ -5,7 +5,6 @@ class HouseworksController < ApplicationController
     @houseworks = Housework.includes(:group).where(group_id: @group.id)
   end
 
-
   def new
   	@housework = Housework.new
     insert_setup
@@ -46,11 +45,5 @@ class HouseworksController < ApplicationController
 
   def edit_housework_params
     params.permit(:name, :score)
-  end
-
-  def insert_setup
-    search_record = GroupUser.find_by(user_id: current_user.id)
-    @group = Group.find(search_record.group_id)
-    @time = Time.current
   end
 end

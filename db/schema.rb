@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_160451) do
+ActiveRecord::Schema.define(version: 2021_05_23_110502) do
+
+  create_table "calculations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "time", null: false
+    t.integer "housework_score"
+    t.integer "sum"
+    t.bigint "user_id", null: false
+    t.bigint "housework_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["housework_id"], name: "index_calculations_on_housework_id"
+    t.index ["user_id"], name: "index_calculations_on_user_id"
+  end
 
   create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -46,6 +58,8 @@ ActiveRecord::Schema.define(version: 2021_05_14_160451) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "calculations", "houseworks"
+  add_foreign_key "calculations", "users"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
   add_foreign_key "houseworks", "groups"

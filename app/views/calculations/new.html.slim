@@ -1,0 +1,8 @@
+= render 'shared/flash_message'
+.container
+  .row
+    .col-lg-8.offset-lg-2
+      h1= Calculation.human_attribute_name(:today_housework)
+      p = Calculation.human_attribute_name(:tell_today_housework)
+      = render 'form', { calculation: @calculation, housework: @housework, time: @time }
+      = link_to Calculation.human_attribute_name(:to_mypage), group_path(@group)
