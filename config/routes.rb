@@ -8,5 +8,14 @@ Rails.application.routes.draw do
   end
   resources :users, only: %i[new create]
   resources :calculations, only: %i[new create]
+  resources :singleshots, only: %i[new create edit update] do
+    member do
+      get 'your_burden'
+      patch 'your_burden_update'
+      get 'partner_burden'
+      patch 'partner_burden_update'
+    end
+  end
   root 'static_pages#home'
 end
+

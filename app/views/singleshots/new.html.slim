@@ -1,0 +1,9 @@
+.singleshot_form
+  .top_contents
+    p = "あなたとパートナーのニックネームは？"
+    = form_with model: @singleshot , local: true do |f|
+      = f.label :Your_name
+      = f.text_field :your_name, class: 'form-control', size: 30
+      = f.label :Partner_name
+      = f.text_field :partner_name, class: 'form-control', size: 30
+      = f.submit "送信", class: 'btn btn-primary'

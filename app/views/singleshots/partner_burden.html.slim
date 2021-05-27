@@ -1,0 +1,15 @@
+.count_singleshot_form
+  .count_top_contents
+    p = "#{@singleshot.partner_name}さんは1日何回家事をしますか？"
+    = form_with url: partner_burden_update_singleshot_path(@singleshot), method: :patch , local: true do |f|
+      = f.label :お料理
+      = f.number_field :partner_cook, class: 'form-control', size: 30, min: 0, max: 10, value:1
+      = f.label :お皿洗い
+      = f.number_field :partner_dish_washing, class: 'form-control', size: 30, min: 0, max: 10, value:1
+      = f.label :お洗濯
+      = f.number_field :partner_laundry, class: 'form-control', size: 30, min: 0, max: 10, value:1
+      = f.label :お風呂掃除
+      = f.number_field :partner_bath_washing, class: 'form-control', size: 30, min: 0, max: 10, value:1
+      = f.label :掃除機かけ
+      = f.number_field :partner_vacuum, class: 'form-control', size: 30, min: 0, max: 10, value:1
+      = f.submit "送信", class: 'btn btn-primary'

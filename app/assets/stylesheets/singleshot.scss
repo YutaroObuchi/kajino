@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+//初回フォーム
+
+.singleshot_form{
+	display: flex;
+	min-height:100vh;
+	background-color: #ffffea;
+  .top_contents{
+  	margin: 0 auto;
+  	p {
+      margin-top: 180px;
+  	}
+  	form{
+  	  margin-top: 30px;
+  	  color: #ec6d71;
+  	  font-family: 'Noto Sans JP', sans-serif;
+  	  .form-control{
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        color: #ff7d6e;
+        background: #ffebe9;
+        border-top: solid 10px #ff7d6e;
+  	  }
+  	  .btn{
+  	  	margin-top: 10px;
+  	  	margin-left: 110px;
+  	  	background-color: #ffb2b2;
+  	  }
+  	}
+  }
+}
+
+
+//2回目のフォーム
+
+.edit_singleshot_form{
+	display: flex;
+	min-height:100vh;
+	background-color: #ffffea;
+  .edit_top_contents{
+  	margin: 0 auto;
+  	p {
+      margin-top: 30px;
+  	}
+  	form{
+  	  margin-top: 30px;
+  	  color: #ec6d71;
+  	  font-family: 'Noto Sans JP', sans-serif;
+  	  .form-control{
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        color: #ff7d6e;
+        background: #ffebe9;
+        border-top: solid 10px #ff7d6e;
+  	  }
+  	  .btn{
+  	  	margin-top: 10px;
+  	  	margin-left: 110px;
+  	  	background-color: #ffb2b2;
+  	  }
+  	}
+  }
+}
+
+
+
+//3回・4回目のフォーム
+.count_singleshot_form{
+	display: flex;
+	min-height:100vh;
+	background-color: #ffffea;
+  .count_top_contents{
+  	margin: 0 auto;
+  	p {
+      margin-top: 30px;
+  	}
+  	form{
+  	  margin-top: 30px;
+  	  color: #ec6d71;
+  	  font-family: 'Noto Sans JP', sans-serif;
+  	  .form-control{
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        color: #ff7d6e;
+        background: #ffebe9;
+        border-top: solid 10px #ff7d6e;
+  	  }
+  	  .btn{
+  	  	margin-top: 10px;
+  	  	margin-left: 110px;
+  	  	background-color: #ffb2b2;
+  	  }
+  	}
+  }
+}
