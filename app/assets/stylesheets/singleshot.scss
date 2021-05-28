@@ -101,43 +101,79 @@
   margin:0 auto;
   font-family: 'Noto Sans JP', sans-serif;
   color: #f5b1aa;
-  background-color: #ffffea;
   font-weight: 900;
 
   .chart-sum{
   	p{
+  	  background-color: #ffffea;
       text-align:center;
       margin-top: 20px;
+      margin-bottom: 50px;
   	}
   }
   .chart-cook{
   	p{
+  	  background-color: #ffffea;
       text-align:center;
       margin-top: 20px;
+      margin-bottom: 50px;
   	}
   }
   .chart-dish_washing{
   	p{
+  	  background-color: #ffffea;
       text-align:center;
       margin-top: 20px;
+      margin-bottom: 50px;
   	}
   }
   .chart-laundry{
   	p{
+  	  background-color: #ffffea;
       text-align:center;
       margin-top: 20px;
+      margin-bottom: 50px;
   	}
   }
   .chart-bath_washing{
   	p{
+  	  background-color: #ffffea;
       text-align:center;
       margin-top: 20px;
+      margin-bottom: 50px;
   	}
   }
   .chart-vacuum{
   	p{
+  	  background-color: #ffffea;
       text-align:center;
       margin-top: 20px;
+      margin-bottom: 50px;
   	}
   }
 }
+
+
+.form_part{
+  text-align:center;
+  .btn-square-pop {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #ffc184;/*背景色*/
+    border-bottom: solid 2px #ffffc1;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .btn-square-pop:active {
+    border-bottom: solid 2px #fd9535;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+  }
+}
+
+
