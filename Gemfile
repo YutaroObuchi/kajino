@@ -32,6 +32,8 @@ gem 'html2slim'
 gem 'bootstrap', '~> 4.1.1'
 gem 'rails-i18n'
 gem 'sorcery', '0.14.0'
+gem "chartkick"
+gem 'chartable'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

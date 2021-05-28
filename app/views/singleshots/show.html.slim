@@ -1,0 +1,20 @@
+.chart-top
+  .chart-sum
+    p = "全体の割合"
+    = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}
+  .chart-cook
+    p = "料理の割合"
+    = pie_chart @cook_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}
+  .chart-dish_washing
+    p = "皿洗いの割合"
+    = pie_chart @dish_washing_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}
+  .chart-laundry
+    p = "洗濯の割合"
+    = pie_chart @laundry_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}
+  .chart-bath_washing
+    p = "お風呂掃除の割合"
+    = pie_chart @bath_washing_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}
+  .chart-vacuum
+    p = "掃除機かけ"
+    = pie_chart @vacuum_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}
+

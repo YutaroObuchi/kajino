@@ -24,6 +24,11 @@ class SingleshotsController < ApplicationController
     end
   end
 
+  def show
+    params_identification
+    calculation_pie_chart
+  end
+
   def your_burden
     params_identification
   end
@@ -47,7 +52,7 @@ class SingleshotsController < ApplicationController
   	params_identification
     if @singleshot.update(singleshot_params)
       partner_burden_calculation
-      redirect_to your_burden_singleshot_path(@singleshot), success: 'ああ'
+      redirect_to singleshot_path(@singleshot), success: 'ああ'
     else
       flash.now[:danger] = "入力に不備があります"
       render :partner_burden
@@ -89,6 +94,15 @@ class SingleshotsController < ApplicationController
     @all_sum               = @partner_cook + @partner_dish_washing + @partner_laundry + @partner_bath_washing + @partner_vacuum
   	Singleshot.update(partner_cook_sum: @partner_cook, partner_dish_washing_sum: @partner_dish_washing,
   		partner_laundry_sum: @partner_laundry, partner_bath_washing_sum: @partner_bath_washing, partner_vacuum_sum: @partner_vacuum, partner_sum: @all_sum )
+  end
+
+  def calculation_pie_chart
+  	@sum = [[@singleshot.your_name, @singleshot.your_sum], [@singleshot.partner_name, @singleshot.partner_sum]]
+    @cook_ration = [[@singleshot.your_name, @singleshot.your_cook_sum], [@singleshot.partner_name, @singleshot.partner_cook_sum]]
+    @dish_washing_ration = [[@singleshot.your_name, @singleshot.your_dish_washing_sum], [@singleshot.partner_name, @singleshot.partner_dish_washing_sum]]
+    @laundry_ration = [[@singleshot.your_name, @singleshot.your_laundry_sum], [@singleshot.partner_name, @singleshot.partner_laundry_sum]]
+    @bath_washing_ration = [[@singleshot.your_name, @singleshot.your_bath_washing_sum], [@singleshot.partner_name, @singleshot.partner_bath_washing_sum]]
+    @vacuum_ration = [[@singleshot.your_name, @singleshot.your_vacuum_sum], [@singleshot.partner_name, @singleshot.partner_vacuum_sum]]
   end
 
 end

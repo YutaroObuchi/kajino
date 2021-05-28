@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: %i[new create]
   resources :calculations, only: %i[new create]
-  resources :singleshots, only: %i[new create edit update] do
+  resources :singleshots, only: %i[new create edit update show] do
     member do
       get 'your_burden'
       patch 'your_burden_update'

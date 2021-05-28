@@ -94,3 +94,50 @@
   	}
   }
 }
+
+
+// 円グラフ
+.chart-top{
+  margin:0 auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #f5b1aa;
+  background-color: #ffffea;
+  font-weight: 900;
+
+  .chart-sum{
+  	p{
+      text-align:center;
+      margin-top: 20px;
+  	}
+  }
+  .chart-cook{
+  	p{
+      text-align:center;
+      margin-top: 20px;
+  	}
+  }
+  .chart-dish_washing{
+  	p{
+      text-align:center;
+      margin-top: 20px;
+  	}
+  }
+  .chart-laundry{
+  	p{
+      text-align:center;
+      margin-top: 20px;
+  	}
+  }
+  .chart-bath_washing{
+  	p{
+      text-align:center;
+      margin-top: 20px;
+  	}
+  }
+  .chart-vacuum{
+  	p{
+      text-align:center;
+      margin-top: 20px;
+  	}
+  }
+}

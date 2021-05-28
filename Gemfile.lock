@@ -79,7 +79,12 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chartable (0.0.0.3)
+      activesupport (>= 3.0.0)
+      chronic (~> 0.10)
+    chartkick (4.0.4)
     childprocess (3.0.0)
+    chronic (0.10.2)
     coderay (1.1.3)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
@@ -306,6 +311,8 @@ DEPENDENCIES
   bootstrap (~> 4.1.1)
   byebug
   capybara
+  chartable
+  chartkick
   factory_bot_rails
   html2slim
   jbuilder (~> 2.7)
