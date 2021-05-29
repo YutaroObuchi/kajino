@@ -1,0 +1,16 @@
+= render 'shared/flash_message'
+.edit_singleshot_form
+  .edit_top_contents
+    p = "家事の負担をポイント化しましょう(最大100pt)"
+    = form_with model: @singleshot , local: true do |f|
+      = f.label :お料理
+      = f.number_field :cook_point, class: 'form-control', size: 30, min: 0, max: 100, value:20
+      = f.label :お皿洗い
+      = f.number_field :dish_washing_point, class: 'form-control', size: 30, min: 0, max: 100, value:20
+      = f.label :お洗濯
+      = f.number_field :laundry_point, class: 'form-control', size: 30, min: 0, max: 100, value:20
+      = f.label :お風呂掃除
+      = f.number_field :bath_washing_point, class: 'form-control', size: 30, min: 0, max: 100, value:20
+      = f.label :掃除機かけ
+      = f.number_field :vacuum_point, class: 'form-control', size: 30, min: 0, max: 100, value:20
+      = f.submit "送信", class: 'btn btn-primary'

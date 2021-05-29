@@ -1,0 +1,35 @@
+= render 'shared/flash_message'
+.chart-top
+  .chart-sum
+    p = "全体の負担割合"
+    = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
+  .chart-cook
+    p = "料理の負担割合"
+    = pie_chart @cook_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}, loading: "計算中...", library: {legend: { position: "top" }}
+    .form_part
+      a.btn-square-pop href="https://shop.hikaritv.net/kurashito/article/cooking_appliances.html"  この家事の負担を減らす
+
+  .chart-dish_washing
+    p = "皿洗いの負担割合"
+    = pie_chart @dish_washing_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}, loading: "計算中...", library: {legend: { position: "top" }}
+    .form_part
+      a.btn-square-pop href="https://www.biccamera.com/bc/i/topics/osusume_dishwasher/index.jsp"  この家事の負担を減らす
+
+  .chart-laundry
+    p = "洗濯の負担割合"
+    = pie_chart @laundry_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}, loading: "計算中...", library: {legend: { position: "top" }}
+    .form_part
+      a.btn-square-pop href="https://www.biccamera.com/bc/i/topics/laundry/index.jsp"  この家事の負担を減らす
+
+  .chart-bath_washing
+    p = "お風呂掃除の負担割合"
+    = pie_chart @bath_washing_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}, loading: "計算中...", library: {legend: { position: "top" }}
+    .form_part
+      a.btn-square-pop href="https://my-best.com/3980"  この家事の負担を減らす
+
+  .chart-vacuum
+    p = "掃除機かけの負担割合"
+    = pie_chart @vacuum_ration, colors: ["#ff7f50", "#87ceeb"], library: {backgroundColor: "#ffffea"}, loading: "計算中...", library: {legend: { position: "top" }}
+    .form_part
+      a.btn-square-pop href="https://kakakumag.com/seikatsu-kaden/?id=11326"  この家事の負担を減らす
+
