@@ -7,8 +7,12 @@ class SingleshotsController < ApplicationController
 
   def create
     @singleshot = Singleshot.create(name_params)
-    @singleshot.save
-    redirect_to edit_singleshot_path(@singleshot), success: "残りあと3問です！"
+    if @singleshot.save
+      redirect_to edit_singleshot_path(@singleshot), success: "残りあと3問です！"
+    else
+      flash.now[:danger] = "入力に不備があります"
+      render :new
+    end
   end
 
   def edit
@@ -28,7 +32,6 @@ class SingleshotsController < ApplicationController
   def show
     params_identification
     calculation_pie_chart
-    @data = {'2019-06-01' => 100, '2019-06-02' => 200, '2019-06-03' => 150}
   end
 
   def your_burden

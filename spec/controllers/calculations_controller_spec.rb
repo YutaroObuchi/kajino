@@ -16,7 +16,7 @@ RSpec.describe 'houseworkポイントの計算', type: :system do
       login(partner)
       visit new_calculation_path
     end
-    fit '入力が正常に動作する' do
+    it '入力が正常に動作する' do
       fill_in 'お風呂掃除', with: 1
       fill_in '食器洗い', with: 3
       fill_in '洗濯', with: 0
