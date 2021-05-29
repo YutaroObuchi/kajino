@@ -1,0 +1,7 @@
+.invite-form
+  = form_with model: @invite, local: true do |f|
+    .invite-group
+      = f.hidden_field :user_group_id, value: @group.id
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+    = f.submit "招待する", class: 'btn btn-primary'
