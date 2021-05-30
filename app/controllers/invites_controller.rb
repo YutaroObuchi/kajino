@@ -1,7 +1,8 @@
 class InvitesController < ApplicationController
   def new
-  	insert_setup
   	@invite = Invite.new
+  	insert_setup
+  	@invite.group_id = @group.id
   end
 
   def create
@@ -17,6 +18,6 @@ class InvitesController < ApplicationController
   private
 
   def invite_params
-    params.require(:invite).permit(:email)
+    params.require(:invite).permit(:email, :recipient_id, :group_id, :sender_id)
   end
 end
