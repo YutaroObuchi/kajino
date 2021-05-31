@@ -16,8 +16,8 @@ class InviteMailer < ApplicationMailer
     mail(to: invite.email, subject: 'Invite')
   end
 
-  def invite
-    @greeting = "Hi"
-    mail to: "to@example.org"
+  def existing_user_invite(invite)
+    @login_url = "http://localhost:3000/login"
+    mail(to: invite.email, subject: 'Invite')
   end
 end
