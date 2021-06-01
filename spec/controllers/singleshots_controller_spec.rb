@@ -6,7 +6,7 @@ RSpec.describe '簡易版機能', type: :system do
      visit new_singleshot_path
    end
 
-    fit 'ログインなしで家事比率を計算することができる' do
+    it 'ログインなしで家事比率を計算することができる' do
       fill_in 'singleshot[your_name]', with: 'サンプル太郎'
       fill_in 'singleshot[partner_name]', with: 'サンプル狸'
       click_button '送信'
@@ -34,7 +34,7 @@ RSpec.describe '簡易版機能', type: :system do
       expect(page).to have_content '家事負担の割合を確認しましょう！'
     end
 
-    fit '名前を入力しないとバリデーションに引っかかる' do
+    it '名前を入力しないとバリデーションに引っかかる' do
       fill_in 'singleshot[your_name]', with: 'サンプル太郎'
       fill_in 'singleshot[partner_name]', with: ''
       click_button '送信'
