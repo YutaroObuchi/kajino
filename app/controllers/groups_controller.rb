@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
     @user = current_user
     @group = @user.groups.build(group_params)
      if @user.save
-       redirect_to group_path(@group), success: t('.success')
+       redirect_to new_invite_path, success: "メンバーを招待しましょう"
      else
        flash.now[:danger] = t('.fail')
        render :new
