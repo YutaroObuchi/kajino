@@ -16,10 +16,10 @@ class InvitesController < ApplicationController
       if @invite.recipient != nil
         InviteMailer.existing_user_invite(@invite).deliver
         @invite.recipient.groups.push(@invite.group)
-        redirect_to group_path(@group), success: "招待メールを送信しました"
+        redirect_to new_group_housework_path(@group), success: "招待メールを送信しました"
       else
         InviteMailer.new_user_invite(@invite, new_user_path(invite_token: @invite.token)).deliver
-        redirect_to group_path(@group), success: "招待メールを送信しました"
+        redirect_to new_group_housework_path(@group), success: "招待メールを送信しました"
       end
     else
       flash.now[:danger] = "送信に失敗しました"

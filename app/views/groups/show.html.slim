@@ -7,7 +7,8 @@
     .your-name
       p = current_user.name
     .your-partner
-      p = @partner.name
+      - unless @partner_name.blank?
+        p = @partner_name.name
 
   .percentage-box
     .your-box
