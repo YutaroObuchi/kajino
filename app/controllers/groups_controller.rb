@@ -20,6 +20,7 @@ class GroupsController < ApplicationController
     @group = Group.find_by(id: @date.group_id)
     identify_partner
     percentage
+    @sum = [[current_user.name, @yours_last], [@partner_name.name, @partners_last]]
   end
 
 
