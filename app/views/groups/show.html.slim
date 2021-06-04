@@ -4,7 +4,11 @@
     h2 = (t 'groups.show.today_housework')
 
   .pie-chart
-    = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
+    - if @sum[0].include?(current_user.name)
+      = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
+    - else
+      .no-date
+        = "家事データがありません"
 
   .select-contents
     .today-housework
