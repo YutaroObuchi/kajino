@@ -4,8 +4,10 @@ class UserSessionsController < ApplicationController
 
   def create
     @user = login(params[:email], params[:password])
-    if @user
-      redirect_back_or_to new_group_path, success: "ログインしました"
+    if @user && @user.groups.blank?
+      redirect_to new_group_path, success: "ログインしました"
+    elsif @user && @user.groups
+      redirect_back_or_to group_path(@user.groups), success: "ログインしました"
     else
       flash.now[:danger] = "ログインに失敗しました"
       render :new
@@ -17,3 +19,19 @@ class UserSessionsController < ApplicationController
     redirect_to root_path
   end
 end
+
+
+
+
+=begin
+  def create
+    @user = login(params[:email], params[:password])
+    binding.pry
+    if @user
+      redirect_back_or_to new_group_path, success: "ログインしました"
+    else
+      flash.now[:danger] = "ログインに失敗しました"
+      render :new
+    end
+  end
+=end

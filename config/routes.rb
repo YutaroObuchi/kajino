@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       patch 'partner_burden_update'
     end
   end
+  resources :invites
   root 'static_pages#home'
 end
 

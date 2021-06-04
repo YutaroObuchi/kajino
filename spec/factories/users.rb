@@ -9,7 +9,7 @@ FactoryBot.define do
       sequence(:name) { |n| "user#{n}" }
       sequence(:email) { |n| "partner@gamil.com" }
   	  password { 'password1' }
-  	  password_confirmation { 'password' }
+  	  password_confirmation { 'password1' }
     end
   end
 end

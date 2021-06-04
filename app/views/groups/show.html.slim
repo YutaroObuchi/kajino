@@ -7,7 +7,8 @@
     .your-name
       p = current_user.name
     .your-partner
-      p = @partner.name
+      - unless @partner_name.blank?
+        p = @partner_name.name
 
   .percentage-box
     .your-box
@@ -23,4 +24,4 @@
     .show-detail
       = link_to '家事ポイントを編集', group_houseworks_path(@group), class: 'btn btn-outline-danger'
     .invite-user
-      = link_to (t 'groups.show.invite_group'), root_path, class: 'btn btn-outline-info'
+      = link_to (t 'groups.show.invite_group'), new_invite_path(@group), class: 'btn btn-outline-info'
