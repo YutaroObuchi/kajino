@@ -16,7 +16,7 @@ RSpec.describe '招待機能', type: :system do
     describe '招待メールの送信'do
       let(:mail) { InviteMailer.existing_user_invite(partner) }
 
-      fit 'ユーザーに招待メールを送ることができる' do
+      it 'ユーザーに招待メールを送ることができる' do
         fill_in 'Email', with: 'partner@gamil.com'
         click_button '招待する'
         expect(mail.subject).to eq('Invite')

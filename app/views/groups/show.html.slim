@@ -4,7 +4,10 @@
     h2 = (t 'groups.show.today_housework')
 
   .pie-chart
-    - if @sum[0].include?(current_user.name)
+    - if @sum.blank?
+      .no-date
+        = "家事データがありません"
+    - elsif @sum[0].include?(current_user.name)
       = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
     - else
       .no-date
@@ -17,3 +20,12 @@
       = link_to (t 'groups.show.show_detail'), root_path, class: 'btn btn-outline-danger'
     .show-detail
       = link_to '家事ポイントを編集', group_houseworks_path(@group), class: 'btn btn-outline-danger'
+
+
+
+/  .pie-chart
+    - if @sum[0].include?(current_user.name)
+      = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
+    - else
+      .no-date
+        = "家事データがありません"
