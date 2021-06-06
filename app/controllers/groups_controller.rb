@@ -20,6 +20,9 @@ class GroupsController < ApplicationController
     @group = Group.find_by(id: @date.group_id)
     identify_partner
     percentage
+    unless @yours.blank?
+      @sum = [[current_user.name, @yours], [@partner_name.name, @partners]]
+    end
   end
 
 
@@ -42,13 +45,12 @@ class GroupsController < ApplicationController
 
   def percentage
     unless @partner.blank?
-      your_sums = Calculation.where(user_id: current_user.id).sum(:sum)
-      partner_sums = Calculation.where(user_id: @partner).sum(:sum)
+      @week = Time.current.all_week
+      your_sums = Calculation.where(user_id: current_user.id, created_at: @week).sum(:sum)
+      partner_sums = Calculation.where(user_id: @partner, created_at: @week).sum(:sum)
       group_sum = your_sums + partner_sums
       @yours = your_sums/group_sum.to_f*100
       @partners = partner_sums/group_sum.to_f*100
-      @yours_last = @yours.ceil(1)
-      @partners_last = @partners.ceil(1)
     end
   end
 end

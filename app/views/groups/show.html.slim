@@ -3,18 +3,15 @@
   .weekly-percentage
     h2 = (t 'groups.show.today_housework')
 
-  .user-name
-    .your-name
-      p = current_user.name
-    .your-partner
-      - unless @partner_name.blank?
-        p = @partner_name.name
-
-  .percentage-box
-    .your-box
-      p = "#{@yours_last}%"
-    .your-partner-box
-      p = "#{@partners_last}%"
+  .pie-chart
+    - if @sum.blank?
+      .no-date
+        = "家事データがありません"
+    - elsif @sum[0].include?(current_user.name)
+      = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
+    - else
+      .no-date
+        = "家事データがありません"
 
   .select-contents
     .today-housework
@@ -23,5 +20,12 @@
       = link_to (t 'groups.show.show_detail'), root_path, class: 'btn btn-outline-danger'
     .show-detail
       = link_to '家事ポイントを編集', group_houseworks_path(@group), class: 'btn btn-outline-danger'
-    .invite-user
-      = link_to (t 'groups.show.invite_group'), new_invite_path(@group), class: 'btn btn-outline-info'
+
+
+
+/  .pie-chart
+    - if @sum[0].include?(current_user.name)
+      = pie_chart @sum, colors: ["#ff7f50", "#87ceeb"], loading: "計算中...", library: {legend: { position: "top", backgroundColor: "#ffffea"}}
+    - else
+      .no-date
+        = "家事データがありません"
