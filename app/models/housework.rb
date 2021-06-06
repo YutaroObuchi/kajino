@@ -3,4 +3,5 @@ class Housework < ApplicationRecord
   validates :score, presence: true
   belongs_to :group
   has_many :calculations
+  has_one :default
 end
