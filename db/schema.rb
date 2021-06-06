@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_29_134727) do
+ActiveRecord::Schema.define(version: 2021_06_06_141101) do
 
   create_table "calculations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "time", null: false
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2021_05_29_134727) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["housework_id"], name: "index_calculations_on_housework_id"
     t.index ["user_id"], name: "index_calculations_on_user_id"
+  end
+
+  create_table "defaults", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "default_time"
+    t.bigint "housework_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["housework_id"], name: "index_defaults_on_housework_id"
   end
 
   create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -104,6 +112,7 @@ ActiveRecord::Schema.define(version: 2021_05_29_134727) do
 
   add_foreign_key "calculations", "houseworks"
   add_foreign_key "calculations", "users"
+  add_foreign_key "defaults", "houseworks"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
   add_foreign_key "houseworks", "groups"
